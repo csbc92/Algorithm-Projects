@@ -26,8 +26,8 @@ public class PQHeap implements PQ {
         @Override
         public void insert(Element element) {
             maxElements++;
-            int i = maxElements;
-            elements = Arrays.copyOf(elements,i);
+            int i = maxElements-1;
+            elements = Arrays.copyOf(elements,maxElements);
 
             elements[i] = element;
 
