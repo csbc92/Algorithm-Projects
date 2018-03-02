@@ -7,18 +7,20 @@ public class PQHeap implements PQ {
 
         private Element[] elements;
         private int maxElements;
+        private int heapSize;
 
         public PQHeap(int maxElements){
             elements = new Element[maxElements];
             this.maxElements = maxElements;
+            heapSize = -1;
 
         }
 
         @Override
         public Element extractMin() {
             Element min = elements[0];
-            elements[0] = elements[elements.length-1];
-            maxElements--;
+            elements[0] = elements[heapSize];
+            heapSize--;
             minHeapify(0);
             return min;
         }
@@ -26,16 +28,18 @@ public class PQHeap implements PQ {
         @Override
         public void insert(Element element) {
             maxElements++;
-            int i = maxElements-1;
+            heapSize++;
+            int i = heapSize;
             elements = Arrays.copyOf(elements,maxElements);
 
             elements[i] = element;
-
-            while(i > 0 && elements[parent(i)].key > elements[i].key){
-                Element temp = elements[parent(i)];
-                elements[parent(i)] = elements[i];
-                elements[i] = temp;
-                i = parent(i);
+            if(elements[parent(i)] != null && elements[i] != null) {
+                while (i > 0 && elements[parent(i)].key > elements[i].key) {
+                    Element temp = elements[parent(i)];
+                    elements[parent(i)] = elements[i];
+                    elements[i] = temp;
+                    i = parent(i);
+                }
             }
         }
 
@@ -43,12 +47,12 @@ public class PQHeap implements PQ {
             int left = left(i);
             int right = right(i);
             int smallest;
-            if(left < elements.length && elements[left].key < elements[i].key){
+            if(left <= heapSize && elements[left].key < elements[i].key){
                 smallest = left;
             } else {
                 smallest = i;
             }
-            if(right < elements.length && elements[right].key < elements[smallest].key){
+            if(right <= heapSize && elements[right].key < elements[smallest].key){
                 smallest = right;
             }
             if(smallest != i){
