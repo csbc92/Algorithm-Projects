@@ -1,7 +1,8 @@
 import java.util.Arrays;
 
 /**
- * Created by danie on 02-03-2018.
+ * Priority Queue Heap implementation.
+ * Lavet af Christian Skafte Beck Clausen Chcla15 og Daniel Johansen Dajoh16
  */
 public class PQHeap implements PQ {
 
@@ -16,7 +17,11 @@ public class PQHeap implements PQ {
 
         }
 
-        @Override
+    /**
+     *Extracts the root element which is the min element
+     * @return
+     */
+    @Override
         public Element extractMin() {
             Element min = elements[0];
             elements[0] = elements[heapSize];
@@ -25,7 +30,11 @@ public class PQHeap implements PQ {
             return min;
         }
 
-        @Override
+    /**
+     * Inserts an element into the priority queue heap
+     * @param element
+     */
+    @Override
         public void insert(Element element) {
             maxElements++;
             heapSize++;
@@ -43,6 +52,10 @@ public class PQHeap implements PQ {
             }
         }
 
+    /**
+     * Rebuilds the heap based on a min heap structure. The call is recursive.
+     * @param i
+     */
         private void minHeapify(int i){
             int left = left(i);
             int right = right(i);
