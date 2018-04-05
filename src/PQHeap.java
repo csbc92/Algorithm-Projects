@@ -40,6 +40,11 @@ public class PQHeap implements PQ {
         int i = heapSize;
 
         elements[i] = element;
+
+        if(parent(i) < 0){
+            return;
+        }
+
         if (elements[parent(i)] != null && elements[i] != null) {
             while (i > 0 && elements[parent(i)].key > elements[i].key) {
                 Element temp = elements[parent(i)];
