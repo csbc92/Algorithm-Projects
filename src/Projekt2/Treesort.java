@@ -1,7 +1,10 @@
 import java.util.Scanner;
 
 public class Treesort {
-
+    /**
+     * Treesort program.
+     * @param args
+     */
     public static void main(String[] args){
         Dict dict = new DictBinTree();
         System.out.println("Java Treesort");

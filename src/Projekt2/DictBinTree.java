@@ -1,7 +1,7 @@
 public class DictBinTree implements Dict {
     private Node root;
     private int treeSize;
-    private int counterOrderedTraversal;
+    private int counterOrderedTraversal; //For use in inorder walk.
 
 
     public DictBinTree() {
