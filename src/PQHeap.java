@@ -106,7 +106,8 @@ public class PQHeap implements PQ {
      * @return
      */
     private int parent(int i) {
-        return (int) (Math.ceil(i / 2) - 1);
+        int parent = (int) (Math.ceil(i / 2D) - 1);
+        return parent;
     }
 }
 
