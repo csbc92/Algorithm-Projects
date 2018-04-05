@@ -1,3 +1,8 @@
+/**
+ * Binary Dictionary Tree implementation
+ *
+ * Lavet af Christian Skafte Beck Clausen (chcla15) og Daniel Johansen (dajoh16)
+ */
 public class DictBinTree implements Dict {
     private Node root;
     private int treeSize;

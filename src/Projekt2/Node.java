@@ -1,3 +1,8 @@
+/**
+ * Node implementation
+ *
+ * Lavet af Christian Skafte Beck Clausen (chcla15) og Daniel Johansen (dajoh16)
+ */
 public class Node {
     private Node left;
     private Node right;

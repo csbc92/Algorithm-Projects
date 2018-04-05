@@ -1,5 +1,9 @@
 import java.util.Scanner;
-
+/**
+ * Treesort implementation
+ *
+ * Lavet af Christian Skafte Beck Clausen (chcla15) og Daniel Johansen (dajoh16)
+ */
 public class Treesort {
     /**
      * Treesort program.
