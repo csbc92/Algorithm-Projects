@@ -1,5 +1,3 @@
-package Projekt3;
-
 /**
  * Priority Queue Heap implementation.
  * Lavet af Christian Skafte Beck Clausen Chcla15 og Daniel Johansen Dajoh16

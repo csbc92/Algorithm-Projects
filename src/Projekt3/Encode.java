@@ -1,10 +1,12 @@
-package Projekt3;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * Encode implementation.
+ * Lavet af Christian Skafte Beck Clausen Chcla15 og Daniel Johansen Dajoh16
+ */
 public class Encode {
 
     public static void main(String[] args) {

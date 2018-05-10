@@ -1,7 +1,6 @@
-package Projekt3;
-
 /**
- * Created by danie on 02-03-2018.
+ * PQ interface.
+ * Lavet af Christian Skafte Beck Clausen Chcla15 og Daniel Johansen Dajoh16
  */
 public interface PQ {
     public Element extractMin();

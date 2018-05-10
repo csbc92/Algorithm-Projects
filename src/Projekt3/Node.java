@@ -1,5 +1,3 @@
-package Projekt3;
-
 /**
  * Node implementation
  *

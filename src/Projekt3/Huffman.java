@@ -1,5 +1,7 @@
-package Projekt3;
-
+/**
+ * Huffman implementation.
+ * Lavet af Christian Skafte Beck Clausen Chcla15 og Daniel Johansen Dajoh16
+ */
 public class Huffman {
 
     private static StringBuilder sb = new StringBuilder();
